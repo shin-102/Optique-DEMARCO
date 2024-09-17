@@ -10,8 +10,8 @@
 </head>
 
 <style>
-  h1 { font-size: 60px; font-weight: bolder;}
-  h2 { font-size: 50px; }
+  h1 { font-size: 60px; font-weight: bold ;}
+  h2 { font-size: 50px; font-weight: bold ;}
   h3 { font-size: 42px; }
   h4 { font-size: 36px; }
   h5 { font-size: 28px; }
@@ -28,11 +28,15 @@
   }
 
   .carousel-item {
-    min-width: 500px;
+    min-width: 400px;
     /* Adjust based on your design */
     margin-right: 1rem;
     /* Space between images */
+    img {
+      height: 400px;
+    }
   }
+  
 
   @keyframes slide {
     0% {
@@ -43,6 +47,10 @@
       transform: translateX(-100%);
     }
   }
+
+  .flagImg {
+    height: 400px
+  } 
 </style>
 
 <body class="bg-gradient-to-r from-slate-200 to-yellow-400 font-optima flex flex-col gap-40">
@@ -69,6 +77,8 @@
     </div>
   </header>
 
+<!-- *HERO SECTION* -->
+
   <article class="container mx-auto w-2/3 rounded-md h-screen flex justify-center items-center">
     <section class="relative">
       <div class="bg-soft-jet/65 inset-0 aspect-video absolute z-[1]  rounded-3xl">
@@ -80,11 +90,13 @@
     </section>
   </article>
 
-  <article class="container mx-auto flex flex-col items-center">
+  <!-- *ABOUT SECTION* -->
+
+  <article class="container mx-auto flex flex-col gap-10 items-center">
     <section>
       <h2>DEMARCO - About</h2>
     </section>
-    <section class="flex">
+    <section class="flex leading-8">
       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iure consequuntur tenetur impedit, nihil eum
         repellat ab. Cum vitae molestiae, velit ducimus quo esse quisquam, explicabo natus incidunt consectetur numquam!
       </div>
@@ -93,7 +105,7 @@
         praesentium!</div>
     </section>
     <section>
-      <div class="carousel w-full max-w-7xl"> <!--Change max-w-4xl for invisible cloak -->
+      <div class="carousel w-full max-w-7xl border-x-2 border-x-soft-jet border-opacity-20"> <!--Change max-w-[] for invisible cloak -->
         <div class="carousel-inner">
           <div class="carousel-item">
             <a href="https://www.instagram.com/p/C2-2JI7Ct4J/"><img src="./images/G1.jpg" alt="Image 1" class="w-full"></a>
@@ -121,35 +133,39 @@
     </section>
   </article>
 
-  <article class="container mx-auto flex flex-col items-center">
+  <!-- *PRODUCTS SECTION* -->
+
+  <article class="container mx-auto flex flex-col gap-10 items-center">
     <section>
       <h2>DEMARCO - Products</h2>
     </section>
     <section class="grid grid-cols-3 gap-4">
       <div class="relative">
-        <span class="absolute right-0 top-4 bg-soft-jet">
-          <h3 class="text-yellow-200">glasses</h3>
+        <span class="absolute right-0 top-4 bg-soft-jet px-4 rounded-s-3xl">
+          <h4 class="text-yellow-200">Glasses</h4>
         </span>
-        <img src="./images/HeroImg.jpeg" alt="img" class="aspect-square">
+        <img src="./images/Demarco-glasses.png" alt="Demarco glasses" class="flagImg">
       </div>
       <div class="relative">
-        <span class="absolute right-0 top-4 bg-soft-jet">
-          <h3 class="text-yellow-200">glasses</h3>
+        <span class="absolute right-0 top-4 bg-soft-jet px-4 rounded-s-3xl">
+          <h4 class="text-yellow-200">Sunglasses</h4>
         </span>
-        <img src="./images/HeroImg.jpeg" alt="img" class="aspect-square">
+        <img src="./images/Demarco-Sunglasses.png" alt="Demarco Sunglasses" class="flagImg">
       </div>
       <div class="relative">
-        <span class="absolute right-0 top-4 bg-soft-jet">
-          <h3 class="text-yellow-200">glasses</h3>
+        <span class="absolute right-0 top-4 bg-soft-jet px-4 rounded-s-3xl">
+          <h4 class="text-yellow-200">Contact Lens</h4>
         </span>
-        <img src="./images/HeroImg.jpeg" alt="img" class="aspect-square">
+        <img src="./images/Demarco-lens.png" alt="Demarco Lens" class="flagImg">
       </div>
     </section>
   </article>
 
+  <!-- *SERVICES SECTION* -->
+
   <article class="flex flex-col items-center gap-20 sm:py-16 lg:py-24">
     <section>
-      <h3>DEMARCO - services</h3>
+      <h2>DEMARCO - services</h2>
     </section>
     <section class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 text-center sm:grid-cols-2 gap-y-8 lg:grid-cols-4 sm:gap-12">
@@ -195,6 +211,8 @@
       </div>
     </section>
   </article>
+
+  <!-- *FOOTER SECTION* -->
 
   <footer class="bg-soft-jet/60 w-full h-screen flex flex-col items-center">
     <section>
