@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ['./index.html','./src/**/*.{html,js}'],
   theme: {
-    extend: {},
+     fontFamily: {
+        optima: ['Optima', 'sans-serif'],
+      },
+      extend: {
+        colors: {
+          'soft-jet' : '#353535'
+        }
+      }      
   },
   plugins: [],
 }
