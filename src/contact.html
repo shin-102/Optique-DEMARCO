@@ -15,35 +15,22 @@
 </head>
 
 <style>
-  h1 {
-    font-size: 60px;
-    font-weight: bold;
+  .wavepattern {
+    background-image: 
+        linear-gradient(to right, #e2e8f0, #fbbf24), /* Tailwind gradient */
+        repeating-radial-gradient(circle at 0 0, transparent 0, #EDF7F6 9px),
+        repeating-linear-gradient(#FFF70055, #FFF700);
+    background-blend-mode: multiply; /* Adjust this as needed */
   }
-
-  h2 {
-    font-size: 50px;
-    font-weight: bold;
-  }
-
-  h3 {
-    font-size: 42px;
-  }
-
-  h4 {
-    font-size: 36px;
-  }
-
-  h5 {
-    font-size: 28px;
-  }
-
-  p,
-  a {
-    font-size: 16px;
-  }
+  h1 { font-size: 60px; font-weight: bold ;}
+  h2 { font-size: 50px; font-weight: bold ;}
+  h3 { font-size: 42px; }
+  h4 { font-size: 36px; }
+  h5 { font-size: 28px; }
+  p, a { font-size: 16px;}
 </style>
 
-<body class="bg-gradient-to-r from-slate-200 to-yellow-400 font-optima flex flex-col gap-40">
+<body class="wavepattern font-optima flex flex-col gap-40">
   <header class="fixed z-10 w-full">
     <div class="mx-10">
       <nav
@@ -51,7 +38,7 @@
         <div class="flex items-center justify-between mx-auto">
           <img src="../images/DEMARCO.png" alt="DEMARCO" class="w-40">
 
-          <ul class="items-center hidden gap-8 ml-10 lg:flex">
+          <ul class="items-center gap-8 ml-10 flex">
             <li>
               <a href="../index.html" class="flex items-center gap-2 font-bold text-slate-200 hover:text-yellow-200">Home</a>
             </li>
@@ -67,14 +54,14 @@
     </div>
   </header>
 
-  <footer class="w-full h-screen flex flex-col items-center relative"> 
+  <footer class="w-full h-screen my-40 flex flex-col items-center relative"> 
     <iframe class="w-full h-screen" height="500"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1080.9304778313485!2d-6.585257663205009!3d34.25821994773918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda759a0eb0531a9%3A0x9d3ec8bf917362bf!2sOptique%20Demarco!5e0!3m2!1sen!2sma!4v1726617342853!5m2!1sen!2sma"
       loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-    <section class="absolute right-0 flex flex-col justify-center items-center gap-2" style="right: 70px;">
+    <section class="absolute right-0 inset-y-0 flex flex-col justify-center items-center gap-2" style="right: 70px;">
       <form class="bg-soft-jet text-white border rounded-lg px-8 py-6 mx-auto my-8 w-[30rem]">
-        <img src="../images/DEMARCO-w.png" alt="logoF" class="w-[200px] my-10">
+        <img src="../images/DEMARCO-w.png" alt="logoF" class="w-[200px] my-5 mx-auto">
         <div class="mb-4">
           <label for="name" class="block font-medium mb-2">Name</label>
           <input type="text" id="name" name="name"
@@ -122,35 +109,21 @@
             class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400"
             rows="4"></textarea>
         </div>
-        <div>
-          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Submit</button>
+        <div class="flex justify-evenly items-center">
+          <button type="submit"
+            class="bg-yellow-400 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition ease-in duration-300">Submit</button>
+          <h5>or</h5>
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 256 256"
+            class="fill-yellow-400 hover:fill-yellow-600 transition ease-in duration-300">
+            <g transform="translate(1.41 1.41) scale(2.81 2.81)" fill="inherit">
+              <path
+                d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 s 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 45.454 68.712 c -4.304 0 -8.347 -1.1 -11.865 -3.031 L 20 70 l 4.431 -13.068 c -2.235 -3.67 -3.522 -7.974 -3.522 -12.576 C 20.908 30.904 31.898 20 45.454 20 C 59.013 20 70 30.904 70 44.356 S 59.012 68.712 45.454 68.712 z" />
+              <path
+                d="M 45.454 23.879 c -11.38 0 -20.637 9.186 -20.637 20.477 c 0 4.481 1.461 8.63 3.931 12.006 l -2.578 7.605 l 7.931 -2.521 c 3.258 2.139 7.162 3.387 11.354 3.387 c 11.378 0 20.637 -9.185 20.637 -20.476 C 66.092 33.066 56.834 23.879 45.454 23.879 z M 57.499 52.805 c -0.503 1.393 -2.96 2.738 -4.062 2.837 c -1.103 0.1 -1.103 0.897 -7.221 -1.492 c -6.117 -2.391 -9.977 -8.615 -10.278 -9.013 c -0.302 -0.398 -2.457 -3.236 -2.457 -6.174 c 0 -2.937 1.554 -4.382 2.105 -4.979 c 0.552 -0.597 1.204 -0.747 1.605 -0.747 s 0.803 0.05 1.153 0.05 c 0.352 0 0.852 -0.199 1.353 0.996 c 0.501 1.196 1.706 4.133 1.856 4.432 c 0.151 0.299 0.252 0.648 0.05 1.046 c -0.199 0.399 -0.299 0.647 -0.601 0.996 c -0.301 0.348 -0.632 0.778 -0.903 1.046 c -0.301 0.297 -0.614 0.62 -0.264 1.217 c 0.351 0.598 1.559 2.552 3.347 4.134 c 2.298 2.033 4.237 2.664 4.838 2.963 c 0.602 0.299 0.953 0.249 1.304 -0.151 c 0.352 -0.398 1.505 -1.742 1.906 -2.34 c 0.401 -0.597 0.803 -0.497 1.354 -0.298 c 0.55 0.198 3.509 1.643 4.111 1.942 c 0.601 0.298 1.002 0.448 1.153 0.697 C 57.999 50.214 57.999 51.409 57.499 52.805 z" />
+            </g>
+          </svg>
         </div>
-  
-      </form>
-      <div>
-        <h5>OR</h5>
-      </div>
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="150"
-          height="150" viewBox="0 0 256 256" xml:space="preserve">
-  
-          <defs>
-          </defs>
-          <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-            transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-            <path
-              d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 s 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 45.454 68.712 c -4.304 0 -8.347 -1.1 -11.865 -3.031 L 20 70 l 4.431 -13.068 c -2.235 -3.67 -3.522 -7.974 -3.522 -12.576 C 20.908 30.904 31.898 20 45.454 20 C 59.013 20 70 30.904 70 44.356 S 59.012 68.712 45.454 68.712 z"
-              style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-              transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-            <path
-              d="M 45.454 23.879 c -11.38 0 -20.637 9.186 -20.637 20.477 c 0 4.481 1.461 8.63 3.931 12.006 l -2.578 7.605 l 7.931 -2.521 c 3.258 2.139 7.162 3.387 11.354 3.387 c 11.378 0 20.637 -9.185 20.637 -20.476 C 66.092 33.066 56.834 23.879 45.454 23.879 z M 57.499 52.805 c -0.503 1.393 -2.96 2.738 -4.062 2.837 c -1.103 0.1 -1.103 0.897 -7.221 -1.492 c -6.117 -2.391 -9.977 -8.615 -10.278 -9.013 c -0.302 -0.398 -2.457 -3.236 -2.457 -6.174 c 0 -2.937 1.554 -4.382 2.105 -4.979 c 0.552 -0.597 1.204 -0.747 1.605 -0.747 s 0.803 0.05 1.153 0.05 c 0.352 0 0.852 -0.199 1.353 0.996 c 0.501 1.196 1.706 4.133 1.856 4.432 c 0.151 0.299 0.252 0.648 0.05 1.046 c -0.199 0.399 -0.299 0.647 -0.601 0.996 c -0.301 0.348 -0.632 0.778 -0.903 1.046 c -0.301 0.297 -0.614 0.62 -0.264 1.217 c 0.351 0.598 1.559 2.552 3.347 4.134 c 2.298 2.033 4.237 2.664 4.838 2.963 c 0.602 0.299 0.953 0.249 1.304 -0.151 c 0.352 -0.398 1.505 -1.742 1.906 -2.34 c 0.401 -0.597 0.803 -0.497 1.354 -0.298 c 0.55 0.198 3.509 1.643 4.111 1.942 c 0.601 0.298 1.002 0.448 1.153 0.697 C 57.999 50.214 57.999 51.409 57.499 52.805 z"
-              style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-              transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-          </g>
-        </svg>
-      </div>
-    </section>
-  
-  </footer>
+        
+        </form>
 </body>
 </html>
