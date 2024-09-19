@@ -7,7 +7,7 @@ module.exports = {
       },
       extend: {
         colors: {
-          'soft-jet' : '#353535'
+          'soft-jet' : '#1C1C1B'
         }
       }      
   },
