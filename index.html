@@ -93,8 +93,16 @@
   <article class="container mx-auto w-full lg:w-2/3 rounded-md mt-40 lg:mt-0 lg:h-screen flex justify-center items-center">
     <section class="relative">
       <div class="bg-soft-jet/65 inset-0 aspect-video absolute z-[1]  rounded-3xl">
-        <div class="flex justify-center items-center h-full">
-          <h1 class="text-white ">Opticien - Demarco</h1>
+        <div class="flex flex-col justify-center items-center h-full">
+          <h1 class="text-white ">Opticien Demarco</h1>
+          <svg class="w-8 h-8 text-yellow-400 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            viewBox="0 0 18 14">
+            <path
+              d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+          </svg>
+          <blockquote class="italic font-semibold text-white">
+            <h4>" Bien voir. Bien être. "</h4>
+          </blockquote>
         </div>
       </div>
       <img src="./images/HeroImg.jpeg" alt="3ibriya" class="blur-sm mx-auto w-full aspect-video rounded-3xl">
@@ -105,7 +113,7 @@
 
   <article class="container mx-auto flex flex-col gap-10 items-center">
     <section>
-      <h2>DEMARCO - About</h2>
+      <h2>About DEMARCO</h2>
     </section>
     <section class="flex leading-8">
       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iure consequuntur tenetur impedit, nihil eum
@@ -148,7 +156,7 @@
 
   <article class="container mx-auto flex flex-col gap-10 items-center">
     <section>
-      <h2>DEMARCO - Products</h2>
+      <h2>DEMARCO : Products</h2>
     </section>
     <section class="grid grid-cols-1 lg:grid-cols-3 gap-4">
       
@@ -179,7 +187,7 @@
 
   <article class="flex flex-col items-center gap-20 sm:py-16 lg:py-24">
     <section>
-      <h2>DEMARCO - services</h2>
+      <h2>DEMARCO : services</h2>
     </section>
     <section class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 text-center sm:grid-cols-2 gap-y-8 lg:grid-cols-4 sm:gap-12">
@@ -188,8 +196,8 @@
           <div class="flex items-center justify-center w-20 h-20 mx-auto bg-blue-100 rounded-full">
             <img src="./images/glasses-mask-svgrepo-com.svg" alt="f1" class="w-8">
           </div>
-          <h3 class="mt-8 text-lg font-semibold text-black">Aesthetic opinion</h3>
-          <p class="mt-4 text-sm text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          <h3 class="mt-8 font-semibold text-black">Consult</h3>
+          <p class="mt-4 text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint.
             Velit officia consequat duis enim velit mollit.</p>
         </div>
@@ -198,8 +206,8 @@
           <div class="flex items-center justify-center w-20 h-20 mx-auto bg-orange-100 rounded-full">
             <img src="./images/sell-product-svgrepo-com.svg" alt="f2" class="w-8">
           </div>
-          <h3 class="mt-8 text-lg font-semibold text-black">Selling</h3>
-          <p class="mt-4 text-sm text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          <h3 class="mt-8 font-semibold text-black">Selling</h3>
+          <p class="mt-4 text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint.
             Velit officia consequat duis enim velit mollit.</p>
         </div>
@@ -208,8 +216,8 @@
           <div class="flex items-center justify-center w-20 h-20 mx-auto bg-green-100 rounded-full">
             <img src="./images/fix-work-repair-system-svgrepo-com.svg" alt="f3" class="w-8">
           </div>
-          <h3 class="mt-8 text-lg font-semibold text-black">Crafting</h3>
-          <p class="mt-4 text-sm text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          <h3 class="mt-8 font-semibold text-black">Crafting</h3>
+          <p class="mt-4 text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint.
             Velit officia consequat duis enim velit mollit.</p>
         </div>
@@ -218,8 +226,8 @@
           <div class="flex items-center justify-center w-20 h-20 mx-auto bg-red-100 rounded-full">
             <img src="./images/repair-box-outline-svgrepo-com.svg" alt="f4" class="w-8">
           </div>
-          <h3 class="mt-8 text-lg font-semibold text-black">Repair</h3>
-          <p class="mt-4 text-sm text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          <h3 class="mt-8 font-semibold text-black">Repair</h3>
+          <p class="mt-4 text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint.
             Velit officia consequat duis enim velit mollit.</p>
         </div>
@@ -247,76 +255,84 @@
         </button>
       </div>
 
-      <form x-show="openTab === 1" class="bg-soft-jet text-white rounded-b-lg px-8 py-6 mx-auto w-[30rem]">
+      <form x-show="openTab === 1" class="bg-soft-jet text-white rounded-b-lg px-8 py-6 mx-auto w-[30rem]"
+        action="mailto:lef.kaouthar.9898@gmail.com" method="POST" enctype="text/plain" onsubmit="return validateForm()">
         <div class="mb-4">
           <label for="name" class="block font-medium mb-2">Name</label>
-          <input type="text" id="name" name="name"
-            class="border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400" required>
+          <input type="text" id="name" placeholder="your name" name="name" pattern="[A-Za-z ]+" title="Name should only contain alphabetic characters"
+            class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400" required>
         </div>
         <div class="mb-4">
           <label for="age" class="block font-medium mb-2">Age</label>
-          <input type="number" id="age" name="age"
-            class="border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400" required>
+          <input type="number" id="age" placeholder="your age" name="age" min="18"
+            class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400" required>
         </div>
         <div class="mb-4">
-          <label for="gender" class="block font-medium mb-2">Gender</label>
-          <select id="gender" name="gender"
-            class="border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400 text-slate-400"
-            required>
-            <option value="">Select gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
+          <label for="phone" class="block font-medium mb-2">Phone Number</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10,}" title="Phone number should be at least 10 digits" placeholder="06 ..."
+            class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400" required>
         </div>
         <div class="mb-4">
           <label class="block font-medium mb-2">What glasses</label>
           <div class="flex flex-wrap -mx-2">
             <div class="px-2 w-1/3">
               <label for="glasses-normal" class="block font-medium mb-2">
-                <input type="radio" id="glasses-normal" name="color" value="red" class="mr-2">glasses
+                <input type="radio" id="glasses-normal" name="type" value="Glasses" class="mr-2">glasses
               </label>
             </div>
             <div class="px-2 w-1/3">
               <label for="glasses-sun" class="block font-medium mb-2">
-                <input type="radio" id="glasses-sun" name="color" value="blue" class="mr-2">Sunglasses
+                <input type="radio" id="glasses-sun" name="type" value="Sunglasses" class="mr-2">Sunglasses
               </label>
             </div>
             <div class="px-2 w-1/3">
               <label for="glasses-lens" class="block font-medium mb-2">
-                <input type="radio" id="glasses-lens" name="color" value="green" class="mr-2">Contact Lens
+                <input type="radio" id="glasses-lens" name="type" value="Contact Lens" class="mr-2">Contact Lens
               </label>
             </div>
           </div>
         </div>
         <div class="mb-4">
           <label for="message" class="block font-medium mb-2">Message</label>
-          <textarea id="message" name="message"
-            class="border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400"
-            rows="4"></textarea>
+          <textarea id="message" name="message" placeholder="write more about your condition so we can help"
+            class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400"
+            rows="4" required minlength="10"></textarea>
         </div>
         <div class="flex justify-center items-center">
           <button type="submit"
             class="bg-yellow-400 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition ease-in duration-300">Submit</button>
         </div>
-      
       </form>
 
       <div x-show="openTab === 2" class="bg-soft-jet rounded-b-lg px-8 py-6 mx-auto w-[30rem] flex justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 256 256"
+        <a title="Whatsapp contact" href="https://wa.me/212663582989">
+          <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 256 256"
           class="fill-yellow-400 hover:fill-yellow-600 transition ease-in duration-300">
-          <g transform="translate(1.41 1.41) scale(2.81 2.81)" fill="inherit">
+            <g transform="translate(1.41 1.41) scale(2.81 2.81)" fill="inherit">
             <path
-              d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 s 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 45.454 68.712 c -4.304 0 -8.347 -1.1 -11.865 -3.031 L 20 70 l 4.431 -13.068 c -2.235 -3.67 -3.522 -7.974 -3.522 -12.576 C 20.908 30.904 31.898 20 45.454 20 C 59.013 20 70 30.904 70 44.356 S 59.012 68.712 45.454 68.712 z" />
+            d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 s 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 45.454 68.712 c -4.304 0 -8.347 -1.1 -11.865 -3.031 L 20 70 l 4.431 -13.068 c -2.235 -3.67 -3.522 -7.974 -3.522 -12.576 C 20.908 30.904 31.898 20 45.454 20 C 59.013 20 70 30.904 70 44.356 S 59.012 68.712 45.454 68.712 z" />
             <path
-              d="M 45.454 23.879 c -11.38 0 -20.637 9.186 -20.637 20.477 c 0 4.481 1.461 8.63 3.931 12.006 l -2.578 7.605 l 7.931 -2.521 c 3.258 2.139 7.162 3.387 11.354 3.387 c 11.378 0 20.637 -9.185 20.637 -20.476 C 66.092 33.066 56.834 23.879 45.454 23.879 z M 57.499 52.805 c -0.503 1.393 -2.96 2.738 -4.062 2.837 c -1.103 0.1 -1.103 0.897 -7.221 -1.492 c -6.117 -2.391 -9.977 -8.615 -10.278 -9.013 c -0.302 -0.398 -2.457 -3.236 -2.457 -6.174 c 0 -2.937 1.554 -4.382 2.105 -4.979 c 0.552 -0.597 1.204 -0.747 1.605 -0.747 s 0.803 0.05 1.153 0.05 c 0.352 0 0.852 -0.199 1.353 0.996 c 0.501 1.196 1.706 4.133 1.856 4.432 c 0.151 0.299 0.252 0.648 0.05 1.046 c -0.199 0.399 -0.299 0.647 -0.601 0.996 c -0.301 0.348 -0.632 0.778 -0.903 1.046 c -0.301 0.297 -0.614 0.62 -0.264 1.217 c 0.351 0.598 1.559 2.552 3.347 4.134 c 2.298 2.033 4.237 2.664 4.838 2.963 c 0.602 0.299 0.953 0.249 1.304 -0.151 c 0.352 -0.398 1.505 -1.742 1.906 -2.34 c 0.401 -0.597 0.803 -0.497 1.354 -0.298 c 0.55 0.198 3.509 1.643 4.111 1.942 c 0.601 0.298 1.002 0.448 1.153 0.697 C 57.999 50.214 57.999 51.409 57.499 52.805 z" />
-          </g>
-        </svg>        
+            d="M 45.454 23.879 c -11.38 0 -20.637 9.186 -20.637 20.477 c 0 4.481 1.461 8.63 3.931 12.006 l -2.578 7.605 l 7.931 -2.521 c 3.258 2.139 7.162 3.387 11.354 3.387 c 11.378 0 20.637 -9.185 20.637 -20.476 C 66.092 33.066 56.834 23.879 45.454 23.879 z M 57.499 52.805 c -0.503 1.393 -2.96 2.738 -4.062 2.837 c -1.103 0.1 -1.103 0.897 -7.221 -1.492 c -6.117 -2.391 -9.977 -8.615 -10.278 -9.013 c -0.302 -0.398 -2.457 -3.236 -2.457 -6.174 c 0 -2.937 1.554 -4.382 2.105 -4.979 c 0.552 -0.597 1.204 -0.747 1.605 -0.747 s 0.803 0.05 1.153 0.05 c 0.352 0 0.852 -0.199 1.353 0.996 c 0.501 1.196 1.706 4.133 1.856 4.432 c 0.151 0.299 0.252 0.648 0.05 1.046 c -0.199 0.399 -0.299 0.647 -0.601 0.996 c -0.301 0.348 -0.632 0.778 -0.903 1.046 c -0.301 0.297 -0.614 0.62 -0.264 1.217 c 0.351 0.598 1.559 2.552 3.347 4.134 c 2.298 2.033 4.237 2.664 4.838 2.963 c 0.602 0.299 0.953 0.249 1.304 -0.151 c 0.352 -0.398 1.505 -1.742 1.906 -2.34 c 0.401 -0.597 0.803 -0.497 1.354 -0.298 c 0.55 0.198 3.509 1.643 4.111 1.942 c 0.601 0.298 1.002 0.448 1.153 0.697 C 57.999 50.214 57.999 51.409 57.499 52.805 z" />
+            </g>
+          </svg> 
+        </a>
+        
       </div>
 
 
     </article>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+  <script>
+    function validateForm() {
+      let phoneInput = document.getElementById('phone');
+      if (phoneInput.value.length < 10) {
+        alert("Phone number should be at least 10 digits");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
   </footer>
 </body>
 
