@@ -31,6 +31,7 @@
   h5 { font-size: 28px; }
   p { font-size: 16px;}
   a { font-size: 20px;}
+  em { font-weight: bold;}
 
   /* HEADER LOGO DROP SHADOW */
   .logo-shadow {
@@ -49,6 +50,11 @@
   .carousel-inner {
     display: flex;
     animation: slide 20s linear infinite;
+  }
+  @media (max-width: 640px) { /* Tailwind's sm breakpoint */
+    .carousel-inner {
+      animation: slide 30s linear infinite; /* Adjusted duration for small devices */
+    }
   }
 
   .carousel-item {
@@ -71,10 +77,6 @@
       transform: translateX(-100%);
     }
   }
-
-  .flagImg {
-    height: 400px
-  } 
 </style>
 
 <body class="wavepattern font-optima flex flex-col gap-40">
@@ -92,16 +94,16 @@
 
   <article class="container mx-auto w-full lg:w-2/3 rounded-md mt-40 lg:mt-0 lg:h-screen flex justify-center items-center">
     <section class="relative">
-      <div class="bg-soft-jet/65 inset-0 aspect-video absolute z-[1]  rounded-3xl">
+      <div class="bg-soft-jet/65 inset-0 aspect-video absolute z-[1] rounded-3xl">
         <div class="flex flex-col justify-center items-center h-full">
-          <h1 class="text-white ">Opticien Demarco</h1>
-          <svg class="w-8 h-8 text-yellow-400 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+          <h1 class="text-white xs:leading-none md:leading-normal">Opticien Demarco</h1>
+          <svg class="lg:w-8 h-8 xs:w-4 text-yellow-400 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
             viewBox="0 0 18 14">
             <path
               d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
           </svg>
           <blockquote class="italic font-semibold text-white">
-            <h4>" Bien voir. Bien être. "</h4>
+            <h4 class="lg:text-4xl xs:text-xl">" Bien voir. Bien être. "</h4>
           </blockquote>
         </div>
       </div>
@@ -115,16 +117,16 @@
     <section>
       <h2>About DEMARCO</h2>
     </section>
-    <section class="flex leading-8">
-      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iure consequuntur tenetur impedit, nihil eum
-        repellat ab. Cum vitae molestiae, velit ducimus quo esse quisquam, explicabo natus incidunt consectetur numquam!
-      </div>
-      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis consectetur possimus facere commodi eos
-        ut dolor quisquam ex aspernatur impedit odit ullam quia iure provident, libero, repudiandae ipsam ea
-        praesentium!</div>
+    <section class="flex lg:flex-row xs:flex-col text-center leading-8">
+      <h5 class="italic"> <em>DEMARCO</em>, votre opticien local à <em>Kenitra</em>, se consacre à l'expertise en santé visuelle, en échange de fidélité. Ouvert
+      depuis deux ans, s'efforce d'offrir des conseils personnalisés et des produits de qualité supérieure à sa
+      clientèle. 
+      <br>
+      Chaque client est unique, et <em>DEMARCO</em> veille à répondre à ses besoins spécifiques.
+      </h5>
     </section>
-    <section>
-      <div class="carousel w-full max-w-7xl border-x-2 border-x-soft-jet border-opacity-20"> <!--Change max-w-[] for invisible cloak -->
+    <section class="block">
+      <div class="carousel w-full max-w-xs md:max-w-2xl lg:max-w-7xl border-x-2 border-x-soft-jet border-opacity-20"> <!--Change max-w-[] for invisible cloak -->
         <div class="carousel-inner">
           <div class="carousel-item">
             <a href="https://www.instagram.com/p/C2-2JI7Ct4J/"><img src="./images/G1.jpg" alt="Image 1" class="w-full"></a>
@@ -164,21 +166,21 @@
         <span class="absolute right-0 top-4 bg-soft-jet px-4 rounded-s-3xl">
           <h4 class="text-yellow-200">Glasses</h4>
         </span>
-        <img src="./images/Demarco-glasses.png" alt="Demarco glasses" class="flagImg">
+        <img src="./images/Demarco-glasses.png" alt="Demarco glasses" class="lg:h-[400px]">
       </div>
 
       <div class="relative shadow-md shadow-[#35353580]">
         <span class="absolute right-0 top-4 bg-soft-jet px-4 rounded-s-3xl">
           <h4 class="text-yellow-200">Sunglasses</h4>
         </span>
-        <img src="./images/Demarco-Sunglasses.png" alt="Demarco Sunglasses" class="flagImg">
+        <img src="./images/Demarco-Sunglasses.png" alt="Demarco Sunglasses" class="lg:h-[400px]">
       </div>
 
       <div class="relative shadow-md shadow-[#35353580]">
         <span class="absolute right-0 top-4 bg-soft-jet px-4 rounded-s-3xl">
           <h4 class="text-yellow-200">Contact Lens</h4>
         </span>
-        <img src="./images/Demarco-lens.png" alt="Demarco Lens" class="flagImg">
+        <img src="./images/Demarco-lens.png" alt="Demarco Lens" class="lg:h-[400px]">
       </div>
     </section>
   </article>
@@ -196,40 +198,36 @@
           <div class="flex items-center justify-center w-20 h-20 mx-auto bg-blue-100 rounded-full">
             <img src="./images/glasses-mask-svgrepo-com.svg" alt="f1" class="w-8">
           </div>
-          <h3 class="mt-8 font-semibold text-black">Consult</h3>
-          <p class="mt-4 text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint.
-            Velit officia consequat duis enim velit mollit.</p>
+          <h3 class="mt-8 font-semibold text-black">Consultation</h3>
+          <p class="mt-4 text-gray-600">On propose un avis d'expert sur les lunettes qui conviennent à la fois à la santé et à l'esthétique. Chaque consultation
+          est personnalisée pour répondre aux attentes visuelles de chaque client.</p>
         </div>
 
         <div class="py-8 px-2 rounded-lg transform transition duration-500 hover:translate-x-2 hover:translate-y-2 border border-black/0 hover:border-black">
           <div class="flex items-center justify-center w-20 h-20 mx-auto bg-orange-100 rounded-full">
             <img src="./images/sell-product-svgrepo-com.svg" alt="f2" class="w-8">
           </div>
-          <h3 class="mt-8 font-semibold text-black">Selling</h3>
-          <p class="mt-4 text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint.
-            Velit officia consequat duis enim velit mollit.</p>
+          <h3 class="mt-8 font-semibold text-black">Vente</h3>
+          <p class="mt-4 text-gray-600"><em>DEMARCO</em> offre une large gamme de lunettes et de lentilles de contact. Avec des marques renommées et des designs
+          contemporains, chaque client peut trouver le style qui lui convient.</p>
         </div>
 
         <div class="py-8 px-2 rounded-lg transform transition duration-500 hover:translate-x-2 hover:translate-y-2 border border-black/0 hover:border-black">
           <div class="flex items-center justify-center w-20 h-20 mx-auto bg-green-100 rounded-full">
             <img src="./images/fix-work-repair-system-svgrepo-com.svg" alt="f3" class="w-8">
           </div>
-          <h3 class="mt-8 font-semibold text-black">Crafting</h3>
-          <p class="mt-4 text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint.
-            Velit officia consequat duis enim velit mollit.</p>
+          <h3 class="mt-8 font-semibold text-black">Fabrication</h3>
+          <p class="mt-4 text-gray-600">On utilise un équipement de pointe pour créer des verres sur mesure selon les prescriptions. Chaque paire de lunettes est
+          fabriquée avec précision pour garantir une vision parfaite.</p>
         </div>
 
         <div class="py-8 px-2 rounded-lg transform transition duration-500 hover:translate-x-2 hover:translate-y-2 border border-black/0 hover:border-black">
           <div class="flex items-center justify-center w-20 h-20 mx-auto bg-red-100 rounded-full">
             <img src="./images/repair-box-outline-svgrepo-com.svg" alt="f4" class="w-8">
           </div>
-          <h3 class="mt-8 font-semibold text-black">Repair</h3>
-          <p class="mt-4 text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint.
-            Velit officia consequat duis enim velit mollit.</p>
+          <h3 class="mt-8 font-semibold text-black">Réparation</h3>
+          <p class="mt-4 text-gray-600"><em>DEMARCO</em> propose des services de réparation pour tous types de lunettes. Que ce soit pour un ajustement ou un
+          remplacement de pièces, DEMARCO est là pour assurer votre satisfaction.</p>
         </div>
       </div>
     </section>
@@ -244,7 +242,7 @@
 
     <article class="flex flex-col justify-center items-center" x-data="{ openTab: 1 }">
 
-      <div class="flex space-x-4 p-2 bg-soft-jet text-white rounded-t-lg shadow-md w-[30rem]">
+      <div class="flex space-x-4 p-2 bg-soft-jet text-white rounded-t-lg shadow-md lg:w-[30rem]">
         <button x-on:click="openTab = 1" :class="{ 'bg-yellow-400': openTab === 1 }"
           class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">
           Email
@@ -255,7 +253,7 @@
         </button>
       </div>
 
-      <form x-show="openTab === 1" class="bg-soft-jet text-white rounded-b-lg px-8 py-6 mx-auto w-[30rem]"
+      <form x-show="openTab === 1" class="bg-soft-jet text-white rounded-b-lg px-8 py-6 mx-auto  lg:w-[30rem]"
         action="mailto:lef.kaouthar.9898@gmail.com" method="POST" enctype="text/plain" onsubmit="return validateForm()">
         <div class="mb-4">
           <label for="name" class="block font-medium mb-2">Name</label>
@@ -304,7 +302,7 @@
         </div>
       </form>
 
-      <div x-show="openTab === 2" class="bg-soft-jet rounded-b-lg px-8 py-6 mx-auto w-[30rem] flex justify-center">
+      <div x-show="openTab === 2" class="bg-soft-jet rounded-b-lg px-8 py-6 mx-auto lg:w-[30rem] flex justify-center">
         <a title="Whatsapp contact" href="https://wa.me/212663582989">
           <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 256 256"
           class="fill-yellow-400 hover:fill-yellow-600 transition ease-in duration-300">

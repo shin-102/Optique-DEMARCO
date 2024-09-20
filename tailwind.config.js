@@ -8,6 +8,9 @@ module.exports = {
       extend: {
         colors: {
           'soft-jet' : '#1C1C1B'
+        },
+        screens: {
+          'xs': '360px'
         }
       }      
   },
