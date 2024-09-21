@@ -12,6 +12,10 @@
   <link rel="mask-icon" href="../images/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <style>
@@ -40,17 +44,16 @@
   }
 </style>
 
-<body class="wavepattern bg-soft-jet/60 font-optima flex flex-col gap-40">
+<body class="wavepattern font-arsenal flex flex-col gap-40">
   <header class="fixed z-10 w-full">
     <nav
-      class="w-full mx-auto max-w-screen py-4 px-8 shadow-md backdrop-saturate-200 backdrop-blur-2xl border-black/80 bg-soft-jet relative z-50 border-0">
-      <div class="flex items-center justify-center mx-auto gap-8">
-        <a href="../src/about.html"
-          class="flex items-center gap-2 font-bold text-slate-200 hover:text-yellow-200">About</a>
-        <a href="../index.html" class="flex items-center gap-2 font-bold"><img src="../images/DEMARCO.png" alt="DEMARCO"
-            class="w-40 transition duration-300 logo-shadow"></a>
-        <a href="../src/contact.html"
-          class="flex items-center gap-2 font-bold text-slate-200 hover:text-yellow-200">Contact</a>
+      class="w-full mx-auto max-w-screen py-6 px-8 shadow-md backdrop-saturate-200 backdrop-blur-2xl border-black/80 bg-soft-jet relative z-50 border-0">
+      <img src="../images/DEMARCO.png" alt="DEMARCO"
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto w-40 transition duration-300 logo-shadow">
+      <div class="flex items-center justify-end mx-auto gap-8">
+        <a href="../index.html" class="font-bold text-slate-200 hover:text-yellow-200">Accueil</a>
+        <a href="../src/about.html" class="font-bold text-slate-200 hover:text-yellow-200">À propos</a>
+        <a href="../src/contact.html" class="font-bold text-slate-200 hover:text-yellow-200">Contact</a>
       </div>
     </nav>
   </header>
@@ -76,48 +79,47 @@
       <form x-show="openTab === 1" class="bg-soft-jet text-white rounded-b-lg px-8 py-6 mx-auto w-[30rem]"
         action="mailto:lef.kaouthar.9898@gmail.com" method="POST" enctype="text/plain" onsubmit="return validateForm()">
         <div class="mb-4">
-          <label for="name" class="block font-medium mb-2">Name</label>
-          <input type="text" id="name" placeholder="your name" name="name" pattern="[A-Za-z ]+"
-            title="Name should only contain alphabetic characters"
-            class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400"
-            required>
+        <label for="name" class="block font-medium mb-2">Nom Complet</label>
+        <input type="text" id="name" placeholder="Nom et Prenom" name="name" pattern="[A-Za-z ]+"
+          title="Name should only contain alphabetic characters"
+          class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400" required>
         </div>
         <div class="mb-4">
           <label for="age" class="block font-medium mb-2">Age</label>
-          <input type="number" id="age" placeholder="your age" name="age" min="18"
+          <input type="number" id="age" placeholder="Votre age" name="age" min="15"
             class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400"
             required>
         </div>
         <div class="mb-4">
-          <label for="phone" class="block font-medium mb-2">Phone Number</label>
+          <label for="phone" class="block font-medium mb-2">Numero/Tel</label>
           <input type="tel" id="phone" name="phone" pattern="[0-9]{10,}" title="Phone number should be at least 10 digits"
-            placeholder="06 ..."
+            placeholder="Commence avec 06 ou 07"
             class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400"
             required>
         </div>
         <div class="mb-4">
-          <label class="block font-medium mb-2">What glasses</label>
+          <label class="block font-medium mb-2">Type</label>
           <div class="flex flex-wrap -mx-2">
             <div class="px-2 w-1/3">
               <label for="glasses-normal" class="block font-medium mb-2">
-                <input type="radio" id="glasses-normal" name="type" value="Glasses" class="mr-2">glasses
+                <input type="radio" id="glasses-normal" name="type" value="Lunettes" class="mr-2">Lunettes
               </label>
             </div>
             <div class="px-2 w-1/3">
               <label for="glasses-sun" class="block font-medium mb-2">
-                <input type="radio" id="glasses-sun" name="type" value="Sunglasses" class="mr-2">Sunglasses
+                <input type="radio" id="glasses-sun" name="type" value="Lunettes-Soleil" class="mr-2">Lunettes Soleil
               </label>
             </div>
             <div class="px-2 w-1/3">
               <label for="glasses-lens" class="block font-medium mb-2">
-                <input type="radio" id="glasses-lens" name="type" value="Contact Lens" class="mr-2">Contact Lens
+                <input type="radio" id="glasses-lens" name="type" value="Lentille-contact" class="mr-2">Lentille contact
               </label>
             </div>
           </div>
         </div>
         <div class="mb-4">
           <label for="message" class="block font-medium mb-2">Message</label>
-          <textarea id="message" name="message" placeholder="write more about your condition so we can help"
+          <textarea id="message" name="message" placeholder="Décrivez d&#39avantage afin que nous puissions vous aider"
             class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400"
             rows="4" required minlength="10"></textarea>
         </div>

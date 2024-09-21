@@ -4,6 +4,7 @@ module.exports = {
   theme: {
      fontFamily: {
         optima: ['Optima', 'sans-serif'],
+        arsenal: ['Arsenal', 'sans-serif'],
       },
       extend: {
         colors: {
