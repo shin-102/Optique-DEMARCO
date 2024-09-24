@@ -49,8 +49,8 @@
     <nav
       class="w-full mx-auto max-w-screen py-6 px-8 shadow-md backdrop-saturate-200 backdrop-blur-2xl border-black/80 bg-soft-jet relative z-50 border-0">
       <img src="../images/DEMARCO.png" alt="DEMARCO"
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto w-40 transition duration-300 logo-shadow">
-      <div class="flex items-center justify-end mx-auto gap-8">
+        class="invisible md:visible absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto w-40 transition duration-300 logo-shadow">
+      <div class="flex items-center justify-center md:justify-end mx-auto gap-8">
         <a href="../index.html" class="font-bold text-slate-200 hover:text-yellow-200">Accueil</a>
         <a href="../src/about.html" class="font-bold text-slate-200 hover:text-yellow-200">À propos</a>
         <a href="../src/contact.html" class="font-bold text-slate-200 hover:text-yellow-200">Contact</a>
@@ -58,14 +58,13 @@
     </nav>
   </header>
 
-  <footer class="w-full h-screen my-40 flex flex-col items-center relative"> 
-    <iframe class="w-full xs:h-[200px] md:h-screen" height="500"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1080.9304778313485!2d-6.585257663205009!3d34.25821994773918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda759a0eb0531a9%3A0x9d3ec8bf917362bf!2sOptique%20Demarco!5e0!3m2!1sen!2sma!4v1726617342853!5m2!1sen!2sma"
-      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <footer class="w-full h-screen flex flex-col items-center relative"> 
+    <iframe class="w-full h-[150px] md:h-full xs:mt-40 md:mt-0" style="min-height: 500px;"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1080.9304778313485!2d-6.585257663205009!3d34.25821994773918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda759a0eb0531a9%3A0x9d3ec8bf917362bf!2sOptique%20Demarco!5e0!3m2!1sen!2sma!4v1726617342853!5m2!1sen!2sma" title="Optique Demarco"></iframe>
 
     <section class="md:absolute md:right-0 md:inset-y-0 flex flex-col justify-center items-center" style="right: 70px;" x-data="{ openTab: 1 }">
   
-      <div class="flex space-x-4 p-2 bg-soft-jet text-white rounded-t-lg shadow-md w-[30rem]">
+      <div class="flex space-x-4 p-2 bg-soft-jet text-white rounded-t-lg shadow-md lg:w-[30rem]">
         <button x-on:click="openTab = 1" :class="{ 'bg-yellow-400': openTab === 1 }"
           class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">
           Email
@@ -76,13 +75,14 @@
         </button>
       </div>
   
-      <form x-show="openTab === 1" class="bg-soft-jet text-white rounded-b-lg px-8 py-6 mx-auto w-[30rem]"
+      <form x-show="openTab === 1" class="bg-soft-jet text-white rounded-b-lg px-8 py-6 mx-auto  lg:w-[30rem]"
         action="mailto:lef.kaouthar.9898@gmail.com" method="POST" enctype="text/plain" onsubmit="return validateForm()">
         <div class="mb-4">
-        <label for="name" class="block font-medium mb-2">Nom Complet</label>
-        <input type="text" id="name" placeholder="Nom et Prenom" name="name" pattern="[A-Za-z ]+"
-          title="Name should only contain alphabetic characters"
-          class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400" required>
+          <label for="name" class="block font-medium mb-2">Nom Complet</label>
+          <input type="text" id="name" placeholder="Nom et Prenom" name="name" pattern="[A-Za-z ]+"
+            title="Name should only contain alphabetic characters"
+            class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400"
+            required>
         </div>
         <div class="mb-4">
           <label for="age" class="block font-medium mb-2">Age</label>

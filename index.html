@@ -28,7 +28,7 @@
         repeating-linear-gradient(#fdf86155, #fdf861);
     background-blend-mode: multiply; /* Adjust this as needed */
   }
-  h1 { font-size: 60px; font-weight: bold ;}
+  h1 { font-size: 58px; font-weight: bold ;}
   h2 { font-size: 50px; font-weight: bold ;}
   h3 { font-size: 42px; }
   h4 { font-size: 36px; }
@@ -57,7 +57,7 @@
   }
   @media (max-width: 640px) { /* Tailwind's sm breakpoint */
     .carousel-inner {
-      animation: slide 30s linear infinite; /* Adjusted duration for small devices */
+      animation: slide 5s linear infinite; /* Adjusted duration for small devices */
     }
   }
 
@@ -81,13 +81,23 @@
       transform: translateX(-100%);
     }
   }
+
+  @media only screen and (max-width: 640px) {
+    .hero-texture {
+      background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'256\' height=\'256\' viewBox=\'0 0 256 256\' style=\'transform: rotate(15deg);\' %3E%3Cpath d=\'M 84.527 40.102 L 73.968 25.444 c -0.215 -0.299 -0.536 -0.508 -0.897 -0.584 l -8.176 -1.726 c -0.796 -0.168 -1.588 0.342 -1.758 1.145 c -0.169 0.802 0.344 1.589 1.145 1.758 l 7.614 1.607 l 8.933 12.4 H 58.157 c -3.459 0 -6.273 2.814 -6.273 6.273 v 2.144 H 38.116 v -2.144 c 0 -3.459 -2.814 -6.273 -6.273 -6.273 H 9.198 l 9.079 -12.399 l 7.62 -1.609 c 0.802 -0.17 1.314 -0.957 1.145 -1.758 c -0.169 -0.801 -0.953 -1.311 -1.758 -1.145 l -8.175 1.726 c -0.357 0.076 -0.674 0.281 -0.89 0.575 L 5.48 40.101 C 2.395 40.493 0 43.128 0 46.318 v 14.307 c 0 3.459 2.814 6.273 6.273 6.273 h 25.57 c 3.459 0 6.273 -2.814 6.273 -6.273 v -9.197 h 13.767 v 9.197 c 0 3.459 2.814 6.273 6.273 6.273 h 25.57 c 3.459 0 6.273 -2.814 6.273 -6.273 V 46.318 C 90 43.13 87.609 40.497 84.527 40.102 z M 35.149 60.625 c 0 1.823 -1.483 3.306 -3.306 3.306 H 6.273 c -1.823 0 -3.306 -1.484 -3.306 -3.306 V 46.318 c 0 -1.823 1.483 -3.306 3.306 -3.306 h 25.57 c 1.823 0 3.306 1.483 3.306 3.306 V 60.625 z M 87.033 60.625 c 0 1.823 -1.484 3.306 -3.306 3.306 h -25.57 c -1.823 0 -3.306 -1.484 -3.306 -3.306 V 46.318 c 0 -1.823 1.484 -3.306 3.306 -3.306 h 25.57 c 1.823 0 3.306 1.483 3.306 3.306 V 60.625 z\' fill=\'rgb(0,0,0)\'/%3E%3C/svg%3E');
+      background-size: 64px 64px; /* Adjust to control the size of the pattern */
+      background-repeat: repeat; /* Ensure it repeats */
+      height: 100vh; /* Full height */
+    }
+  }
+
 </style>
 
 <body class="wavepattern font-arsenal flex flex-col gap-40">
   <header class="fixed z-10 w-full">
       <nav class="w-full mx-auto max-w-screen py-6 px-8 shadow-md backdrop-saturate-200 backdrop-blur-2xl border-black/80 bg-soft-jet relative z-50 border-0">
-        <img src="./images/DEMARCO.png" alt="DEMARCO" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto w-40 transition duration-300 logo-shadow">
-        <div class="flex items-center justify-end mx-auto gap-8">
+        <img src="./images/DEMARCO.png" alt="DEMARCO" class="invisible md:visible absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto w-40 transition duration-300 logo-shadow">
+        <div class="flex items-center justify-center md:justify-end mx-auto gap-8">
           <a href="./index.html" class="font-bold text-slate-200 hover:text-yellow-200">Accueil</a>
           <a href="./src/about.html" class="font-bold text-slate-200 hover:text-yellow-200">À propos</a>
           <a href="./src/contact.html" class="font-bold text-slate-200 hover:text-yellow-200">Contact</a>
@@ -97,17 +107,17 @@
 
 <!-- *HERO SECTION* -->
 
-  <article class="container mx-auto w-full lg:w-2/3 rounded-md mt-40 lg:mt-0 lg:h-screen flex justify-center items-center">
+  <article class="md:container mx-auto w-full lg:w-2/3  h-screen flex justify-center items-center hero-texture xs:bg-soft-jet/80 md:bg-transparent">
     <section class="relative">
-      <div class="bg-soft-jet/65 inset-0 aspect-video absolute z-[1] rounded-3xl">
+      <div class="bg-transparent md:bg-soft-jet/65 inset-0 aspect-video absolute z-[1] rounded-3xl">
         <div class="flex flex-col justify-center items-center text-center h-full xs:gap-0 md:gap-4 lg:gap-8 xl:gap-16">
-          <h1 class="text-white xs:leading-none md:leading-normal">Bienvenue chez <br><em class="text-[80px]">Optique DEMARCO</em></h1>
+          <h1 class="text-white xs:leading-none md:leading-normal">Bienvenue chez <br><em class="text-[80px]">Optique <span class="bg-gradient-to-r from-yellow-200 via-yellow-500 to-yellow-400 bg-clip-text text-transparent md:bg-none md:text-current">DEMARCO</span></em></h1>
           <blockquote class="italic font-semibold text-white">
             <h4 class="lg:text-4xl xs:text-xl font-thin">" We bet you would look good in glasses  "</h4>
           </blockquote>
         </div>
       </div>
-      <img src="./images/HeroImg.jpeg" alt="3ibriya" class="blur-sm mx-auto w-full aspect-video rounded-3xl">
+      <img src="./images/HeroImg.jpeg" alt="hero_glasses" class="opacity-0 md:opacity-100 blur-sm mx-auto w-full aspect-video rounded-3xl">
     </section>
   </article>
 
@@ -117,7 +127,7 @@
     <section>
       <h2>À propos de nous</h2>
     </section>
-    <section class="flex lg:flex-row xs:flex-col text-center leading-8">
+    <section class="flex lg:flex-row xs:flex-col text-left md:text-center leading-8">
       <h5 class="italic"> <em>DEMARCO</em>, votre opticien local à <em>Kenitra</em>, se consacre à l'expertise en santé visuelle, en échange de fidélité. Ouvert
       depuis deux ans, s'efforce d'offrir des conseils personnalisés et des produits de qualité supérieure à sa
       clientèle. 

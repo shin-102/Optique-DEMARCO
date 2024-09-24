@@ -43,39 +43,6 @@
   .logo-shadow:hover {
     filter: drop-shadow(0 4px 20px rgba(255, 221, 51, 1)); /* Yellow shadow on hover */
   }
-
-  .carousel {
-    overflow: hidden;
-    position: relative;
-  }
-
-  .carousel-inner {
-    display: flex;
-    animation: slide 20s linear infinite;
-  }
-
-  .carousel-item {
-    min-width: 400px;
-    /* Adjust based on your design */
-    margin-right: 1rem;
-
-    /* Space between images */
-    img {
-      height: 400px;
-    }
-  }
-
-
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
   .flagImg {
     height: 400px
   }
@@ -86,16 +53,16 @@
     <nav
       class="w-full mx-auto max-w-screen py-6 px-8 shadow-md backdrop-saturate-200 backdrop-blur-2xl border-black/80 bg-soft-jet relative z-50 border-0">
       <img src="../images/DEMARCO.png" alt="DEMARCO"
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto w-40 transition duration-300 logo-shadow">
-      <div class="flex items-center justify-end mx-auto gap-8">
+        class="invisible md:visible absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto w-40 transition duration-300 logo-shadow">
+      <div class="flex items-center justify-center md:justify-end mx-auto gap-8">
         <a href="../index.html" class="font-bold text-slate-200 hover:text-yellow-200">Accueil</a>
         <a href="../src/about.html" class="font-bold text-slate-200 hover:text-yellow-200">À propos</a>
         <a href="../src/contact.html" class="font-bold text-slate-200 hover:text-yellow-200">Contact</a>
       </div>
     </nav>
   </header>
-  
-  <div class="grid grid-cols-1 overflow-scroll sm:overflow-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 mt-40 max-h-[40rem] no-scrollbar">
+
+  <div class="grid grid-cols-1 overflow-scroll sm:overflow-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-0 md:p-4 mt-40 max-h-[40rem] no-scrollbar">
     <blockquote class="instagram-media"
       data-instgrm-permalink="https://www.instagram.com/p/C2-7BuhiHOZ/?utm_source=ig_embed&amp;utm_campaign=loading"
       data-instgrm-version="14"
@@ -432,32 +399,17 @@
       </div>
     </blockquote>
 
-
-
-  <!-- Repeat this div for each image 
-    <div class="group cursor-pointer relative">
-      <img
-        src="https://images.unsplash.com/photo-1502754400466-c87ff3039da7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMXx8cml2ZXJ8ZW58MHwwfHx8MTY5NDA5OTg4Mnww&ixlib=rb-4.0.3&q=80&w=1080"
-        alt="Image 1"
-        class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105" />
-      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-        <button class="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-          View
-        </button>
-      </div>
-    </div>
-  -->
   <script async src="//www.instagram.com/embed.js"></script>
   </div>
-
+-->
   <footer class="bg-soft-jet/60 w-full h-screen flex flex-col items-center">
     <article>
       <img src="../images/DEMARCO-b.png" alt="logoF" class="w-[600px] mt-20">
     </article>
   
     <article class="flex flex-col justify-center items-center" x-data="{ openTab: 1 }">
-    
-      <div class="flex space-x-4 p-2 bg-soft-jet text-white rounded-t-lg shadow-md w-[30rem]">
+  
+      <div class="flex space-x-4 p-2 bg-soft-jet text-white rounded-t-lg shadow-md lg:w-[30rem]">
         <button x-on:click="openTab = 1" :class="{ 'bg-yellow-400': openTab === 1 }"
           class="flex-1 py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-blue transition-all duration-300">
           Email
@@ -467,14 +419,15 @@
           Whatsapp
         </button>
       </div>
-    
-      <form x-show="openTab === 1" class="bg-soft-jet text-white rounded-b-lg px-8 py-6 mx-auto w-[30rem]"
+  
+      <form x-show="openTab === 1" class="bg-soft-jet text-white rounded-b-lg px-8 py-6 mx-auto  lg:w-[30rem]"
         action="mailto:lef.kaouthar.9898@gmail.com" method="POST" enctype="text/plain" onsubmit="return validateForm()">
         <div class="mb-4">
-        <label for="name" class="block font-medium mb-2">Nom Complet</label>
-        <input type="text" id="name" placeholder="Nom et Prenom" name="name" pattern="[A-Za-z ]+"
-          title="Name should only contain alphabetic characters"
-          class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400" required>
+          <label for="name" class="block font-medium mb-2">Nom Complet</label>
+          <input type="text" id="name" placeholder="Nom et Prenom" name="name" pattern="[A-Za-z ]+"
+            title="Name should only contain alphabetic characters"
+            class="text-black border border-yellow-200 p-2 w-full rounded-lg focus:outline-none focus:border-yellow-400"
+            required>
         </div>
         <div class="mb-4">
           <label for="age" class="block font-medium mb-2">Age</label>
@@ -520,8 +473,8 @@
             class="bg-yellow-400 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition ease-in duration-300">Submit</button>
         </div>
       </form>
-    
-      <div x-show="openTab === 2" class="bg-soft-jet rounded-b-lg px-8 py-6 mx-auto w-[30rem] flex justify-center">
+  
+      <div x-show="openTab === 2" class="bg-soft-jet rounded-b-lg px-8 py-6 mx-auto lg:w-[30rem] flex justify-center">
         <a title="Whatsapp contact" href="https://wa.me/212663582989">
           <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 256 256"
             class="fill-yellow-400 hover:fill-yellow-600 transition ease-in duration-300">
@@ -533,10 +486,10 @@
             </g>
           </svg>
         </a>
-    
+  
       </div>
-    
-    
+  
+  
     </article>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <script>
@@ -550,7 +503,7 @@
         return true;
       }
     </script>
-    </footer>
+  </footer>
 </body>
 
 </html>
